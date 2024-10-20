@@ -8,7 +8,7 @@
   const name = 'Lean Evora';
   const introduction =
     'I am a recent BSIT Graduate with high foundation in Cybersecurity!';
-  const avatar = '/dz-portfolio/images/avatar.png'; // Please enter the absolute path (including subpaths)
+  const avatar = 'https://i.ibb.co/GtZgt87/53-resize.png'; // Please enter the absolute path (including subpaths)
   const about =
     'I am a recent BSIT graduate with a strong focus on IT support and cybersecurity. My expertise includes troubleshooting hardware and software issues, and securing systems. I’m always eager to learn new skills and stay updated on the latest trends in technology. Outside of work, I enjoy diving deeper into cybersecurity, solving problems, and connecting with the tech community. My goal is to continue growing in the field and contribute to innovative solutions. Thanks for checking out my site!';
   const place = 'Lipa, Batangas City';
