@@ -16,28 +16,18 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
-      
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 8.0.0 # Specify the pnpm version you want to use
-
-      - name: Install dependencies using pnpm
-        run: pnpm install
-
-      - name: Build the site using Astro
+      - name: Install, build, and upload your site
         uses: withastro/action@v3
         with:
-          path: . # The root location of your Astro project
-          node-version: 20 # Specify the version of Node.js
-          package-manager: pnpm # Ensure the correct package manager is used
+          package-manager: pnpm@latest
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          publish_dir: './dist' # This should match your Astro output directory
