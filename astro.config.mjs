@@ -7,8 +7,8 @@ import robotsTxt from 'astro-robots-txt';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://leanevorach.github.io', // Please enter the URL where you will host your website.
-  base: 'my-repo', // If you are hosting your website at a subpath, enter it here.
+  site: 'https://leanevorach.github.io/my-repo', // Ensure this matches your repo URL
+  base: '/my-repo/', // Set the base path correctly
   integrations: [
     UnoCSS({
       injectReset: true,
